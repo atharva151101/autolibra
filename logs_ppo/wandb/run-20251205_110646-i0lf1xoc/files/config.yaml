@@ -1,0 +1,105 @@
+_wandb:
+    value:
+        cli_version: 0.22.2
+        e:
+            qcpllwhs31al7qtdqyflj3ms14j8qc4d:
+                apple:
+                    ecpuCores: 6
+                    gpuCores: 10
+                    memoryGb: 16
+                    name: Apple M4
+                    pcpuCores: 4
+                    ramTotalBytes: "17179869184"
+                    swapTotalBytes: "17179869184"
+                codePath: src/training/ppo.py
+                codePathLocal: src/training/ppo.py
+                cpu_count: 10
+                cpu_count_logical: 10
+                disk:
+                    /:
+                        total: "494384795648"
+                        used: "141278949376"
+                email: atharvac@stanford.edu
+                executable: /Users/atharvachougule/miniconda/envs/tinker/bin/python3
+                git:
+                    commit: 1f64e5a61195fad0e74f56f1352af3e5f77ce52e
+                    remote: https://github.com/Open-Social-World/autolibra
+                host: Atharvas-MacBook-Pro-3.local
+                memory:
+                    total: "17179869184"
+                os: macOS-15.6.1-arm64-arm-64bit
+                program: /Users/atharvachougule/CS329X/autolibra/src/training/ppo.py
+                python: CPython 3.11.14
+                root: logs_ppo
+                startedAt: "2025-12-05T19:06:46.841306Z"
+                writerId: qcpllwhs31al7qtdqyflj3ms14j8qc4d
+        m: []
+        python_version: 3.11.14
+        t:
+            "1":
+                - 1
+                - 49
+                - 51
+            "2":
+                - 1
+                - 11
+                - 49
+                - 51
+            "3":
+                - 13
+                - 16
+                - 61
+            "4": 3.11.14
+            "5": 0.22.2
+            "12": 0.22.2
+            "13": darwin-arm64
+async_config:
+    value: null
+base_url:
+    value: null
+compute_post_kl:
+    value: false
+dataset_builder:
+    value:
+        batch_size: 16
+        group_size: 4
+        model_name_for_tokenizer: meta-llama/Llama-3.1-8B-Instruct
+        renderer_name: llama3
+        reward_model_name: meta-llama/Llama-3.3-70B-Instruct
+        seed: 0
+enable_trace:
+    value: false
+eval_every:
+    value: 0
+evaluator_builders:
+    value: []
+kl_discount_factor:
+    value: 0
+kl_penalty_coef:
+    value: 0
+learning_rate:
+    value: 4e-05
+load_checkpoint_path:
+    value: null
+log_path:
+    value: logs_ppo
+lora_rank:
+    value: 32
+loss_fn:
+    value: ppo
+max_tokens:
+    value: 256
+model_name:
+    value: meta-llama/Llama-3.1-8B-Instruct
+num_substeps:
+    value: 1
+remove_constant_reward_groups:
+    value: false
+save_every:
+    value: 20
+stream_minibatch_config:
+    value: null
+wandb_name:
+    value: summarization_rlnlhf
+wandb_project:
+    value: tinker_personalization

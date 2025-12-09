@@ -42,6 +42,7 @@ async def behavior_clustering(
                 response_format=BehaviorClusteringOutput,
                 reasoning_effort="high",
             )
+            print(completion)
             break
         except ValidationError as e:
             # In rare cases, the response may not be parsed correctly.

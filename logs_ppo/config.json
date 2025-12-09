@@ -1,0 +1,31 @@
+{
+  "learning_rate": 4e-05,
+  "dataset_builder": {
+    "batch_size": 16,
+    "model_name_for_tokenizer": "meta-llama/Llama-3.1-8B-Instruct",
+    "renderer_name": "llama3",
+    "group_size": 4,
+    "seed": 0,
+    "reward_model_name": "meta-llama/Llama-3.3-70B-Instruct"
+  },
+  "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+  "max_tokens": 256,
+  "compute_post_kl": false,
+  "evaluator_builders": [],
+  "lora_rank": 32,
+  "kl_penalty_coef": 0.0,
+  "kl_discount_factor": 0.0,
+  "loss_fn": "ppo",
+  "num_substeps": 1,
+  "wandb_project": "tinker_personalization",
+  "wandb_name": "summarization_rlnlhf",
+  "log_path": "logs_ppo",
+  "base_url": null,
+  "enable_trace": false,
+  "remove_constant_reward_groups": false,
+  "eval_every": 0,
+  "save_every": 20,
+  "load_checkpoint_path": null,
+  "async_config": null,
+  "stream_minibatch_config": null
+}

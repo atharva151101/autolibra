@@ -1,7 +1,7 @@
 import asyncio
 from importlib import resources
 import jinja2
-from openai import AsyncAzureOpenAI, RateLimitError
+from openai import AsyncAzureOpenAI, RateLimitError, BadRequestError
 from autolibra_core.configs import AutoLibraEvalSettings
 from pydantic import BaseModel
 from ..utils import render_training_instance
@@ -39,6 +39,7 @@ async def feedback_grounding(
     wait_time = 1
     while True:
         try:
+            print(prompt)
             completion = await client.beta.chat.completions.parse(
                 model=model,
                 messages=[
@@ -50,12 +51,14 @@ async def feedback_grounding(
                 ],
                 response_format=FeedbackGroundingOutput,
             )
+            print(completion)
             break
         except RateLimitError as e:
             print(f"Rate limit error: {e}")
             await asyncio.sleep(wait_time)
             wait_time *= 2
-
+        except Exception as e:
+            return []
     if not completion.choices[0].message.parsed:
         raise ValueError("Failed to parse the response.")
     else:
